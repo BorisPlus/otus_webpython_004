@@ -40,7 +40,7 @@
 
 [Пример](https://github.com/BorisPlus/otus_webpython_004/tree/master/additional/import_to_db_from/data/test_data.py) 
 заранее подготовленных данных лежит в **_additional/import_to_db_from/data/test_data.py_**, 
-это данные с "Яндекс.Маркет", внесенные в указанную структуру вручную.
+это данные с "Яндекс.Маркет" (не реклама), внесенные в указанную структуру специального вида вручную.
 
 ### Пример сбора данных с "Мвидео" (не реклама) 
 
@@ -63,7 +63,7 @@ pip3 install urllib3==1.22
 или
 
 ```
-pip3 install -r requirements.txt
+pip3 install -r additional/import_to_db_from/requirements.txt
 ```
 ### Пример сбора данных и их импорта
 
