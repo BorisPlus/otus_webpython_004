@@ -10,7 +10,7 @@
 * Значение атрибутов у товаров
 
 , что схематично можно представить  ER-моделью (3NF) базы данных как
-![KIOSK_ER_model](https://github.com/BorisPlus/otus_webpython_004/tree/master/additional/docs/simple_ER_model.png "Title")
+![KIOSK_ER_model](https://raw.githubusercontent.com/BorisPlus/otus_webpython_004/master/additional/docs/simple_ER_model.png "Title")
 
 
 Если углубляться в реальные требования к подобному приложению, без реализации функционала
