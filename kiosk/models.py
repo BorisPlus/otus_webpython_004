@@ -1,6 +1,8 @@
 import os
 import sys
 
+from sqlalchemy.schema import UniqueConstraint
+
 kiosk_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if kiosk_path not in sys.path:
     sys.path.append(kiosk_path)
@@ -11,16 +13,19 @@ from kiosk.config import db
 class ProductAttributes(db.Model):
     product_id = db.Column(db.Integer, db.ForeignKey('product.id'), primary_key=True)
     attribute_id = db.Column(db.Integer, db.ForeignKey('attribute.id'), primary_key=True)
-    value = db.Column(db.String(50))
+    value = db.Column(db.String(100))
     product = db.relationship("Product", back_populates="attributes")
     attribute = db.relationship("Attribute", back_populates="products")
+    __table_args__ = (UniqueConstraint('product_id', 'attribute_id', name='_p2a_unique'),)
 
 
 class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), unique=True, nullable=False)
+    name = db.Column(db.String(100), unique=True, nullable=False)
     description = db.Column(db.String(200), nullable=False)
-    main_image_path = db.Column(db.String(120), nullable=False)
+    shop_url = db.Column(db.String(200), nullable=False)  # ссылка на товар в магазине
+    main_image_path = db.Column(db.String(200), nullable=False)  # изображение товара
+    __table_args__ = (UniqueConstraint('name', 'shop_url', name='_prod_unique'),)
     attributes = db.relationship("ProductAttributes", back_populates="product")
 
     def __repr__(self):
@@ -32,7 +37,7 @@ class Product(db.Model):
 
 class Attribute(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(50), unique=True, nullable=False)
+    name = db.Column(db.String(100), unique=True, nullable=False)
     products = db.relationship("ProductAttributes", back_populates="attribute")
 
     def __repr__(self):

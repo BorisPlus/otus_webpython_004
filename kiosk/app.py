@@ -6,8 +6,11 @@ kiosk_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if kiosk_path not in sys.path:
     sys.path.append(kiosk_path)
 
-from kiosk.config import app
+from kiosk.config import app, db_path, db
 from kiosk.models import Product
+
+if not os.path.exists(db_path):
+    db.create_all()
 
 
 @app.route("/")
@@ -37,6 +40,7 @@ def not_found(error):
     resp.headers['X-Something'] = '404 Not found'
 
     return resp
+
 
 if __name__ == '__main__':
     app.run()
