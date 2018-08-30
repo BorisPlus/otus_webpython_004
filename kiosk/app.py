@@ -6,10 +6,10 @@ kiosk_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if kiosk_path not in sys.path:
     sys.path.append(kiosk_path)
 
-from kiosk.config import app, db_path, db
+from kiosk.config import app, db_file, db
 from kiosk.models import Product
 
-if not os.path.exists(db_path):
+if not os.path.exists(db_file):
     db.create_all()
 
 
