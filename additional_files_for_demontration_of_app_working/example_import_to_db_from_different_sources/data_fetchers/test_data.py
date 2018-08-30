@@ -6,7 +6,9 @@ if kiosk_path not in sys.path:
     sys.path.append(kiosk_path)
 
 
-def get_products_info():
+def get_products_info(link=None):
+    if link:
+        pass
     return [
         {
             'main_image_path': 'https://avatars.mds.yandex.net/get-mpic/364668/img_id4117518369631908336.jpeg/6hq',
