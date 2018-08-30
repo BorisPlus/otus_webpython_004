@@ -1,7 +1,7 @@
 import os
 import sys
 
-additional_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+additional_path = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 if additional_path not in sys.path:
     sys.path.append(additional_path)
 
