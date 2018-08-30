@@ -40,8 +40,8 @@
 Установите их
 
 ```python
-pip3 install flask==0.10
-pip3 install Flask-SQLAlchemy==2.3.2
+pip3 install flask==0.12.3 
+pip3 install flask-sqlalchemy==2.3.2
 ```
 
 или
