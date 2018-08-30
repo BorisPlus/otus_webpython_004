@@ -38,7 +38,6 @@ def about():
 def not_found(error):
     resp = make_response(render_template('error.html'), 404)
     resp.headers['X-Something'] = '404 Not found'
-
     return resp
 
 
