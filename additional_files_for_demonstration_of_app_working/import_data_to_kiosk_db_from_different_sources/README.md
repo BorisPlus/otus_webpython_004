@@ -42,11 +42,11 @@
 
 ### Модули получения сведений о товарах
 
-#### Пример заранее подготовленных сведений
+#### Пример заранее подготовленных сведений (офлайн)
 
 [Пример](https://github.com/BorisPlus/otus_webpython_004/tree/master/additional_files_for_demonstration_of_app_working/import_data_to_kiosk_db_from_different_sources/data_fetchers/test_data.py) заранее подготовленных сведений о товарах, атрибутах и их значениях лежит в **_example_import_to_db_from_different_sources/data_fetchers/test_data.py_**. Это данные с "Яндекс.Маркет" (не реклама), внесенные вручную в указанную структуру специального вида для последующего их импорта.
 
-#### Пример интерактивного сбора сведений с сайта Интернет-магазина "Мвидео" (не реклама) 
+#### Пример онлайн сбора сведений с сайта Интернет-магазина "Мвидео" (не реклама) 
 
 [Пример](https://github.com/BorisPlus/otus_webpython_004/tree/master/additional_files_for_demonstration_of_app_working/import_data_to_kiosk_db_from_different_sources/data_fetchers/mvideo_ru_data.py) 
 интерактивного сбора сведений о товарах, атрибутах и их значениях со страниц сайта Интернет-магазина "Мвидео" (не реклама) лежит в **_example_import_to_db_from_different_sources/data_fetchers/mvideo_ru_data.py_**.
