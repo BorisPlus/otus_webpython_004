@@ -11,4 +11,5 @@ if not os.path.exists(db_folder):
     os.mkdir(db_folder)
 db_file = '%s.db' % os.path.join(db_folder, app_name)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///%s' % db_file
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # Solving FSADeprecationWarning
 db = SQLAlchemy(app)
