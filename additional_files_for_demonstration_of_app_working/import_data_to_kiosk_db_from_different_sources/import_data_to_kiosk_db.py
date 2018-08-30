@@ -7,7 +7,7 @@ if additional_path not in sys.path:
 
 from additional_files_for_demonstration_of_app_working.import_data_to_kiosk_db_from_different_sources.data_fetchers.test_data \
     import get_products_info as get_test_products_info
-from additional_files_for_demonstration_of_app_working.import_data_to_kiosk_db_from_different_sources.data_fetchers.test_data \
+from additional_files_for_demonstration_of_app_working.import_data_to_kiosk_db_from_different_sources.data_fetchers.mvideo_ru_data \
     import get_products_info as get_mvideo_ru_products_info
 from additional_files_for_demonstration_of_app_working.import_data_to_kiosk_db_from_different_sources.data_importer.importer \
     import do_import_products_info_to_database

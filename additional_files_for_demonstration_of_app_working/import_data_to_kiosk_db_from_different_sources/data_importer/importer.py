@@ -45,7 +45,6 @@ def do_import_products_info_to_database(products_info):
 
                 db.session.add(obj_p2a)
 
-        db.session.commit()
 
 
 if __name__ == '__main__':
