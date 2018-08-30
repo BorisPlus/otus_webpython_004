@@ -21,7 +21,7 @@ def products_list():
 
 @app.route("/product_info/<int:product_id>")
 def product_info(product_id):
-    product = Product.query.get(product_id)
+    product = Product.query.get(product_id)  # иначе сработает декоратор @app.errorhandler(404)
     if product:
         return render_template('product_info.html', product_id=product_id, product=product)
     else:
