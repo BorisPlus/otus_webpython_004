@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<br>
-<br>
+{% extends 'base.html' %}
 
+{% block html_body %}
+<br>
+<br>
 <center>
     {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -34,7 +29,5 @@
         </tr>
         {% endfor %}
     </table>
-
 </center>
-</body>
-</html>
+{% endblock %}

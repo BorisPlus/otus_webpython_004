@@ -1,5 +1,10 @@
-<!doctype html>
-<title>Product №{{ product_id }} info</title>
+{% extends 'base.html' %}
+
+{% block html_head_title %}
+Product №{{ product_id }} info
+{% endblock %}
+
+{% block html_body %}
 <a href="/">К общему списку</a>
 <br>
 <br>
@@ -15,15 +20,14 @@
                 <b><u>{{ product.name }}</u></b> <br>
                 {{ product.description }} <br>
                 <ul>
-
-                    с{% for attr in product.attributes %}
+                    {% for attr in product.attributes %}
                     <li><b>{{ attr.attribute.name }}:</b> {{ attr.value }}</li>
                     {% endfor %}
                 </ul>
                 <br>
                 <a href="{{ product.shop_url }}" target="_blank">Перейти на сайт магазина</a> <br>
-
             </td>
         </tr>
     </table>
 </center>
+{% endblock %}
